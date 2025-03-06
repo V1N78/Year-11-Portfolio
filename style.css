@@ -6,33 +6,36 @@
     display: flex;
     align-items: right;
     justify-content: right;
-    color: transparent;
-    -webkit-text-stroke: 3px darkmagenta;
+    background-image: url(images/image3.png);
   }
   
 .topnav::before{
-  content: "Home";
+  content: "";
   position: absolute;
   width: 0%;
   height: 25%;
   overflow: hidden;
   color: darkmagenta;
-  border-right: 3px solid darkmagenta;
   transition: 1s ease-in-out;
 }
 
-.topnav:hover::before{
-  width: 25%;
-  filter: drop-shadow(0 0 25px darkmage);
+.topnav a::after{
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 25%;
+  overflow: hidden;
+  color: yellow;
+  transition: 0.5s, ease-in-out;
 }
 
   .topnav a {
     float: right;
     color: #000000;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 16px;
     text-decoration: none;
-    font-size: 20px
+    font-size: 23px
   }
 
   .topnav a.active {
@@ -50,14 +53,4 @@
     font-weight: bold;
     padding: 13px;
     font-family: 'Bradley Hand', cursive;
-}
-
-.overlay-text {
-  position: relative;
-  display: inline-block;
-}
-
-.overlay-text img {
-  width: 100%;
-  height: auto;
 }
