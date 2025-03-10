@@ -9,15 +9,6 @@
     background-image: url(images/image3.png);
   }
   
-.topnav::before{
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 25%;
-  overflow: hidden;
-  color: darkmagenta;
-  transition: 1s ease-in-out;
-}
 
 .topnav a::after{
   content: "";
@@ -38,10 +29,6 @@
     font-size: 23px
   }
 
-  .topnav a.active {
-    color: black;
-  }
-
 .abt{
     color: #98cab8;
     position: absolute;
@@ -53,4 +40,9 @@
     font-weight: bold;
     padding: 13px;
     font-family: 'Bradley Hand', cursive;
+}
+
+a:hover {
+  font-size: 28px;
+  transition: 0.35s ease-in-out;
 }
