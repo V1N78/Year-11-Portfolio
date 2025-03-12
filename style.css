@@ -44,12 +44,29 @@
 
 a:hover {
   font-size: 29px;
-  transition: 0.35s;
+  transition: 0.35s ease-in-out;
   color: beige;
 }
 
 a:hover::after{
   color: beige;
   font-size: 29px;
-  transition: 0.35s;
+  transition: 0.35s ease-in-out;
+}
+
+.abt2 {
+  color: #98cab8;
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  color: white;
+  font-size: 53px;
+  font-weight: bold;
+  padding: 13px;
+  font-family: 'Bradley Hand', cursive;
+}
+
+.rotate-img {
+  transform: scaleX(-1);
+  transform: scaleY(-1);
 }
