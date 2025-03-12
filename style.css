@@ -70,9 +70,3 @@ a:hover::after{
   padding: 13px;
   font-family: 'Bradley Hand', cursive;
 }
-
-.abt-pic {
-  height: 100vh;
-  width: 100%;
-  background-repeat: revert;
-}
