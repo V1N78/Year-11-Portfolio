@@ -70,3 +70,12 @@ a:hover::after{
   padding: 13px;
   font-family: 'papyrus';
 }
+
+.html {
+  scroll-behavior: smooth;
+}
+
+.abt-pic {
+  width: 100%;
+  background-size: cover;
+}
