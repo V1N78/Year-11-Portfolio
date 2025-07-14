@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Memory Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-900 text-white">
+    <div class="text-center p-6 bg-gray-800 rounded-lg shadow-lg w-96">
+        <h1 class="text-2xl font-bold mb-4">Number Memory Game</h1>
+        <div id="game-area">
+            <p id="number-display" class="text-3xl font-mono mb-4"></p>
+            <input id="user-input" type="text" class="w-full p-2 text-black rounded mb-2 hidden" placeholder="Enter the numbers">
+            <button id="start-btn" class="w-full bg-blue-500 p-2 rounded">Start Game</button>
+            <button id="submit-btn" class="w-full bg-green-500 p-2 rounded mt-2 hidden">Submit</button>
+            <p id="result-message" class="mt-3 font-bold"></p>
+        </div>
+    </div>
+
+    <script>
+        let randomNumbers = "";
+        const numberDisplay = document.getElementById("number-display");
+        const userInput = document.getElementById("user-input");
+        const startBtn = document.getElementById("start-btn");
+        const submitBtn = document.getElementById("submit-btn");
+        const resultMessage = document.getElementById("result-message");
+
+        function generateNumbers() {
+            randomNumbers = Array.from({ length: 10 }, () => Math.floor(Math.random() * 10)).join(" ");
+            numberDisplay.textContent = randomNumbers;
+            userInput.classList.add("hidden");
+            submitBtn.classList.add("hidden");
+            resultMessage.textContent = "";
+            
+            setTimeout(() => {
+                numberDisplay.textContent = "";
+                userInput.classList.remove("hidden");
+                submitBtn.classList.remove("hidden");
+                userInput.focus();
+            }, 3000); // Show numbers for 3 seconds
+        }
+
+        function checkNumbers() {
+            if (userInput.value.trim() === randomNumbers) {
+                resultMessage.textContent = "Correct! 🎉";
+                resultMessage.classList.add("text-green-400");
+            } else {
+                resultMessage.textContent = `Wrong! The numbers were ${randomNumbers}`;
+                resultMessage.classList.add("text-red-400");
+            }
+            userInput.value = "";
+        }
+
+        startBtn.addEventListener("click", generateNumbers);
+        submitBtn.addEventListener("click", checkNumbers);
+    </script>
+</body>
+</html>
