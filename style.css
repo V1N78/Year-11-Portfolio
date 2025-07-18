@@ -1,6 +1,5 @@
 .topnav {
-    font-family: 'papyrus';
-    font-weight: bold;
+    font-family: 'lucida console', monospace;
     background-color: #000000;
     height: 100vh;
     width: 100%;
@@ -26,9 +25,9 @@
     float: right;
     color: #000000;
     text-align: center;
-    padding: 20px 19px;
+    padding: 26px 30px;
     text-decoration: none;
-    font-size: 23px
+    font-size: 23.5px
   }
 
 .abt{
@@ -39,12 +38,11 @@
     transform: translate(-50%, -50%);
     color: white;
     font-size: 50px;
-    font-weight: bold;
     padding: 100px;
-    font-family: 'papyrus';
+    font-family: 'lucida console', monospace;
 }
 .abt h1 span{
-  color: beige;
+  color: F5f5dc
 }
 
 a:hover {
